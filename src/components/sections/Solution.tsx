@@ -12,7 +12,7 @@ const features = [
   },
   {
     title: "Skin of Colour Expertise",
-    body: "Trained specifically for the dermatological realities of Nigerian patients — melanin-rich skin, common presentations, and cultural context.",
+    body: "Trained specifically for the dermatological realities of Nigerian patients: melanin-rich skin, common presentations, and cultural context.",
   },
   {
     title: "Clinical Confidence at the Counter",
@@ -35,8 +35,8 @@ export function Solution() {
           </RevealOnScroll>
           <RevealOnScroll delay={0.16}>
             <p className="text-brown-light leading-relaxed">
-              The Barrier-First Framework is a structured clinical lens for every skin interaction —
-              built on dermatology science, adapted for the pharmacy counter.
+              The Barrier-First Framework is a structured clinical lens for every skin interaction,
+              built on dermatology science and adapted for the pharmacy counter.
             </p>
           </RevealOnScroll>
         </div>

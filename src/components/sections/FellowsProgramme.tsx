@@ -7,10 +7,10 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { CalendarTick, Clock, Award, People } from "iconsax-reactjs";
 
 const details = [
-  { icon: CalendarTick, label: "Cohort-based intake", value: "Next opening Q1 2026" },
+  { icon: CalendarTick, label: "Cohort-based intake", value: "Next cohort opens October 2026" },
   { icon: Clock, label: "Structured curriculum", value: "8 core modules" },
   { icon: Award, label: "On completion", value: "SIMTI Certified Fellow" },
-  { icon: People, label: "Post-fellowship", value: "Community of practice" },
+  { icon: People, label: "Post-cohort", value: "Community of practice" },
 ];
 
 export function FellowsProgramme() {
@@ -20,7 +20,7 @@ export function FellowsProgramme() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <RevealOnScroll delay={0}>
-              <Eyebrow variant="teal">Fellows Programme</Eyebrow>
+              <Eyebrow variant="teal">Cohort Programme</Eyebrow>
             </RevealOnScroll>
             <RevealOnScroll delay={0.08}>
               <h2 className="font-display text-4xl lg:text-5xl font-semibold text-cream leading-tight mb-6">
@@ -29,9 +29,9 @@ export function FellowsProgramme() {
             </RevealOnScroll>
             <RevealOnScroll delay={0.16}>
               <p className="text-cream/70 leading-relaxed mb-8 max-w-lg">
-                The SIMTI Fellowship is a cohort-based learning experience — not a self-paced
-                course. You move through the curriculum with a group of peers, gaining a clinical
-                credential and a professional community that lasts beyond the programme.
+                SIMTI runs as a cohort-based programme, not a self-paced course. You move through
+                the curriculum with a group of peers, gaining a clinical credential and a
+                professional community that lasts beyond the cohort.
               </p>
             </RevealOnScroll>
             <RevealOnScroll delay={0.24}>

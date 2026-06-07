@@ -112,8 +112,7 @@ export function Footer() {
         <Divider variant="full" className="bg-cream/10" />
 
         <p className="mt-6 text-xs text-cream/30 text-center">
-          © {new Date().getFullYear()} SIMTI — Skin Integrity &amp; Management Training Institute.
-          &nbsp;
+          © {new Date().getFullYear()} SIMTI: Safe In My Skin Training Institute. &nbsp;
           <Link href="#" className="hover:text-cream/60 transition-colors">
             Privacy Policy
           </Link>

@@ -25,7 +25,7 @@ export default function NotFound() {
               Back to Home
             </Button>
             <Button variant="ghost" href="/apply">
-              Apply for the Fellowship
+              Apply for the Cohort
             </Button>
           </div>
         </Container>

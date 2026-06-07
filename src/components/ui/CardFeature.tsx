@@ -14,7 +14,6 @@ export function CardFeature({ icon, title, body, className }: CardFeatureProps) 
         "relative bg-cream border border-border rounded-xl p-8 overflow-hidden",
         "transition-transform duration-250 hover:-translate-y-1 hover:shadow-lg",
         "before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-0.75",
-        // "before:bg-linear-to-r before:from-gold before:to-teal",
         className
       )}
     >

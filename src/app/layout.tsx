@@ -28,11 +28,11 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://safeinmyskintraininginstitute.com"),
-  title: "SIMTI — Barrier First, Always | Clinical Skin Training for Pharmacists",
+  title: "SIMTI: Barrier First, Always | Clinical Skin Training for Pharmacists",
   description:
     "SIMTI trains Nigerian pharmacists to become certified clinical skin experts through the Barrier-First Framework. Join the Fellows Programme today.",
   openGraph: {
-    title: "SIMTI — Barrier First, Always",
+    title: "SIMTI: Barrier First, Always",
     description:
       "Clinical skin training for pharmacists in Nigeria. Become a certified SIMTI Fellow.",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
