@@ -27,7 +27,7 @@ export function WhoIsItFor() {
             </RevealOnScroll>
             <RevealOnScroll delay={0.16}>
               <p className="text-brown-light leading-relaxed mb-4">
-                SIMTI is not a general skincare course. It is a clinical fellowship designed
+                SIMTI is not a general skincare course. It is a clinical cohort programme designed
                 specifically for licensed pharmacists who interact with patients daily.
               </p>
               <p className="text-brown-light leading-relaxed">

@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     quote:
-      "The cohort model made it possible — learning alongside colleagues kept me accountable and made the material stick.",
+      "The cohort model made it possible. Learning alongside colleagues kept me accountable and made the material stick.",
     author: "Pharmacist C.",
     role: "Community Pharmacy, Port Harcourt",
   },

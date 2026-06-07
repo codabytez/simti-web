@@ -21,26 +21,32 @@ export function Hero() {
           {/* Left column */}
           <div>
             <RevealOnScroll delay={0}>
-              <Eyebrow variant="light">Fellows Programme · Cohort 2025</Eyebrow>
+              <Eyebrow variant="light">Fellows Programme</Eyebrow>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.08}>
-              <h1 className="font-display text-5xl lg:text-7xl font-semibold text-cream leading-[1.1] tracking-tight mb-6">
+              <h1 className="font-display text-5xl lg:text-7xl font-semibold text-cream leading-[1.1] tracking-tight mb-3">
                 Train to Become Nigeria&apos;s Leading Clinical Skin Expert
               </h1>
             </RevealOnScroll>
 
+            <RevealOnScroll delay={0.12}>
+              <p className="text-sm text-cream/50 tracking-wide mb-6">
+                SIMTI: Safe In My Skin Training Institute
+              </p>
+            </RevealOnScroll>
+
             <RevealOnScroll delay={0.16}>
               <p className="text-lg text-cream/75 leading-relaxed mb-10 max-w-xl">
-                A structured fellowship for licensed pharmacists ready to practise evidence-based
-                skin care — grounded in the Barrier-First Framework.
+                A structured training for licensed pharmacists ready to practice evidence-based skin
+                care grounded in the Barrier-First Framework.
               </p>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.24}>
               <div className="flex flex-wrap items-center gap-4 mb-10">
                 <Button variant="primary" size="lg" href="/apply">
-                  Apply for the Fellowship
+                  Apply for Cohort 2
                 </Button>
                 <Button variant="ghost" size="lg" href="#curriculum">
                   See Curriculum

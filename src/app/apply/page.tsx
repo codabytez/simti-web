@@ -6,9 +6,9 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ApplyForm } from "@/components/sections/ApplyForm";
 
 export const metadata: Metadata = {
-  title: "Apply — SIMTI Fellows Programme",
+  title: "Apply | SIMTI Fellows Programme",
   description:
-    "Apply to become a SIMTI Certified Fellow. A structured clinical skin fellowship for licensed pharmacists in Nigeria.",
+    "Apply to become a SIMTI Certified Fellow. A structured clinical skin cohort programme for licensed pharmacists in Nigeria.",
 };
 
 export default function ApplyPage() {
@@ -22,10 +22,10 @@ export default function ApplyPage() {
           <Container className="relative z-10">
             <Eyebrow variant="light">Fellows Programme · 2026 Cohort</Eyebrow>
             <h1 className="font-display text-4xl lg:text-6xl font-semibold text-cream leading-tight max-w-2xl mt-2">
-              Apply for the Fellowship
+              Apply for the Cohort
             </h1>
             <p className="text-cream/70 mt-4 max-w-xl leading-relaxed">
-              Complete the form below. Applications are reviewed on a rolling basis — places are
+              Complete the form below. Applications are reviewed on a rolling basis, and places are
               limited and awarded on merit.
             </p>
           </Container>

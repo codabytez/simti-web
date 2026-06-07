@@ -11,11 +11,11 @@ const problems = [
   },
   {
     title: "Topical steroids misused at the point of sale",
-    body: "Potent corticosteroids are routinely recommended for conditions they cannot treat — and discontinued without a taper.",
+    body: "Potent corticosteroids are routinely recommended for conditions they cannot treat and discontinued without a taper.",
   },
   {
     title: "Skin of colour conditions misdiagnosed or overlooked",
-    body: "Dermatology training in Nigeria rarely centres the realities of dark skin. Pharmacists inherit the same blind spots.",
+    body: "Dermatology training in Nigeria rarely centres the realities of skin-to-color. Pharmacists inherit the same blind spots.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function Problem() {
             </RevealOnScroll>
             <RevealOnScroll delay={0.08}>
               <h2 className="font-display text-4xl lg:text-5xl font-semibold text-brown-dark leading-tight mb-10">
-                Pharmacists are the first line of skin care advice in Nigeria. Most aren&apos;t
+                Pharmacists are the first line of skin care advice in Nigeria, but most aren&apos;t
                 equipped for it.
               </h2>
             </RevealOnScroll>
@@ -49,8 +49,8 @@ export function Problem() {
           <RevealOnScroll delay={0.2}>
             <div className="bg-navy rounded-2xl p-10 lg:p-14">
               <blockquote className="font-display text-2xl lg:text-3xl italic text-cream leading-snug">
-                &ldquo;The dispensing point is a clinical touchpoint. SIMTI prepares you to use it
-                well.&rdquo;
+                &ldquo;Pharmacists are more than just dispensers. They&rsquo;re a clinical
+                touchpoint, and SIMTI prepares you to show up as one.&rdquo;
               </blockquote>
             </div>
           </RevealOnScroll>

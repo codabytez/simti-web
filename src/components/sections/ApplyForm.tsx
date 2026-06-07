@@ -135,7 +135,7 @@ export function ApplyForm() {
         <textarea
           {...register("motivation")}
           rows={5}
-          placeholder="Tell us about your current practice, what gaps you experience, and what you hope to take away from the fellowship..."
+          placeholder="Tell us about your current practice, what gaps you experience, and what you hope to take away from the cohort..."
           className={cn(
             inputBase,
             "resize-none",

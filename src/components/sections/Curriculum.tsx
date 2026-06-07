@@ -13,7 +13,7 @@ const modules = [
   { number: "04", title: "Condition Assessment at the Dispensing Point" },
   { number: "05", title: "Evidence-Based Product Recommendation" },
   { number: "06", title: "Managing Common Skin Presentations" },
-  { number: "07", title: "Topical Steroids — Safe Guidance Protocol" },
+  { number: "07", title: "Topical Steroids: Safe Guidance Protocol" },
   { number: "08", title: "Case Studies & Clinical Practice" },
 ];
 
