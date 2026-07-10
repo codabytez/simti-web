@@ -5,11 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
-const trustSignals = [
-  "PCN-Recognized Curriculum",
-  "Cohort-Based Learning",
-  "Certified SIMTI Fellow",
-];
+const trustSignals = ["Cohort-Based Learning", "Certified SIMTI Fellow"];
 
 export function Hero() {
   return (
