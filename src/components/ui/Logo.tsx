@@ -1,5 +1,4 @@
 import Image from "next/image";
-import logo from "@/assets/logo.png";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +19,7 @@ export function Logo({ size = 40, wordmark = true, className }: LogoProps) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
       <Image
-        src={logo}
+        src="/logo.png"
         alt=""
         width={size}
         height={size}
