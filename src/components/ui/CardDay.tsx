@@ -29,15 +29,6 @@ export function CardDay({ day, title, note, topics, className }: CardDayProps) {
         className
       )}
     >
-      <span
-        aria-hidden="true"
-        className={cn(
-          "absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0",
-          "bg-linear-to-r from-teal via-teal-light to-transparent",
-          "transition-transform duration-500 ease-editorial group-hover:scale-x-100"
-        )}
-      />
-
       <p className="font-mono tabular text-xs font-medium uppercase tracking-[0.2em] text-teal">
         {day}
       </p>
