@@ -1,14 +1,16 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
-import { Problem } from "@/components/sections/Problem";
-import { Solution } from "@/components/sections/Solution";
-import { FellowsProgramme } from "@/components/sections/FellowsProgramme";
-import { Curriculum } from "@/components/sections/Curriculum";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { StatsBar } from "@/components/sections/StatsBar";
-import { WhoIsItFor } from "@/components/sections/WhoIsItFor";
-import { ApplicationCTA } from "@/components/sections/ApplicationCTA";
+import { Footer, Navbar } from "@/components/layout";
+import {
+  ApplicationCTA,
+  Curriculum,
+  Hero,
+  Problem,
+  Programme,
+  Solution,
+  StatsBar,
+  Testimonials,
+  WhoIsItFor,
+} from "@/components/sections";
+import { showTestimonials } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -18,9 +20,9 @@ export default function Home() {
         <Hero />
         <Problem />
         <Solution />
-        <FellowsProgramme />
+        <Programme />
         <Curriculum />
-        <Testimonials />
+        {showTestimonials && <Testimonials />}
         <StatsBar />
         <WhoIsItFor />
         <ApplicationCTA />

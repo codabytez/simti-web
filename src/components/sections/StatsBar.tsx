@@ -1,28 +1,24 @@
 "use client";
 
-import { Container } from "@/components/layout/Container";
-import { StatBlock } from "@/components/ui/StatBlock";
-import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-
-const stats = [
-  { number: "142+", label: "Fellows Trained" },
-  { number: "11", label: "Nigerian States Reached" },
-  { number: "8", label: "Core Curriculum Modules" },
-  { number: "96%", label: "Report Increased Clinical Confidence" },
-];
+import { Section } from "@/components/layout";
+import { StatBlock } from "@/components/ui";
+import { Stagger } from "@/components/motion";
+import { stats } from "@/lib/content";
 
 export function StatsBar() {
   return (
-    <section className="bg-brown py-16">
-      <Container>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {stats.map((s, i) => (
-            <RevealOnScroll key={s.label} delay={i * 0.08}>
-              <StatBlock number={s.number} label={s.label} />
-            </RevealOnScroll>
-          ))}
-        </div>
-      </Container>
-    </section>
+    <Section tone="brown" size="sm" grain aria-label="SIMTI by the numbers">
+      <Stagger
+        stagger={0.1}
+        as="ul"
+        className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 divide-cream/12 lg:divide-x"
+      >
+        {stats.map((s) => (
+          <li key={s.label} className="lg:px-4">
+            <StatBlock value={s.value} label={s.label} />
+          </li>
+        ))}
+      </Stagger>
+    </Section>
   );
 }

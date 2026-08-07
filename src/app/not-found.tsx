@@ -1,30 +1,40 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Container } from "@/components/layout/Container";
-import { Button } from "@/components/ui/Button";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Container, Footer, Navbar } from "@/components/layout";
+import { Button } from "@/components/ui";
+import { site } from "@/lib/site";
 
 export default function NotFound() {
   return (
     <>
       <Navbar />
-      <main className="bg-brown-dark min-h-screen flex items-center pt-18">
-        <div className="absolute inset-0 opacity-[0.12] bg-[url('/noise.svg')] pointer-events-none" />
-        <Container className="relative z-10 py-32 text-center">
-          <Eyebrow variant="light" className="justify-center">
+      {/* `relative` matters: the grain overlay is absolutely positioned, and
+          without a positioned ancestor it resolved against the viewport. */}
+      <main
+        id="main-content"
+        className="relative isolate overflow-hidden flex min-h-screen items-center bg-brown-dark pt-18"
+      >
+        <div className="grain" aria-hidden="true" />
+        <div
+          aria-hidden="true"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[45vw] max-w-225
+                     rounded-full pointer-events-none blur-3xl
+                     bg-[radial-gradient(ellipse,rgba(184,150,58,0.12),transparent_70%)]"
+        />
+
+        <Container className="relative py-32 text-center">
+          <p className="font-mono tabular text-sm font-medium uppercase tracking-[0.3em] text-gold-light">
             404
-          </Eyebrow>
-          <h1 className="font-display text-5xl lg:text-7xl font-semibold text-cream leading-tight mb-6 max-w-2xl mx-auto">
+          </p>
+          <h1 className="mt-6 font-display text-display-lg font-semibold text-cream text-balance mx-auto max-w-2xl">
             This page doesn&apos;t exist.
           </h1>
-          <p className="text-cream/60 text-lg mb-10 max-w-md mx-auto leading-relaxed">
-            The page you&apos;re looking for may have moved or never existed.
+          <p className="mx-auto mt-5 max-w-md text-lead text-cream/60 text-pretty">
+            The page you&apos;re looking for may have moved, or never existed.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="mt-11 flex flex-wrap justify-center gap-4">
             <Button variant="primary" href="/">
               Back to Home
             </Button>
-            <Button variant="ghost" href="/apply">
+            <Button variant="ghost" href={site.applyUrl}>
               Apply for the Cohort
             </Button>
           </div>

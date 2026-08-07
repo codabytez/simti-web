@@ -1,107 +1,101 @@
 import Link from "next/link";
 import { Container } from "./Container";
-import { Divider } from "@/components/ui/Divider";
-import { Instagram } from "iconsax-reactjs";
+import { InstagramIcon, LinkedInIcon, Logo } from "@/components/ui";
+import { site } from "@/lib/site";
 
 const programme = [
   { label: "About SIMTI", href: "#about" },
-  { label: "Fellows Programme", href: "#programme" },
+  { label: "Programme", href: "#programme" },
   { label: "Curriculum", href: "#curriculum" },
-  { label: "Apply", href: "#apply" },
+  { label: "Apply", href: site.applyUrl },
 ];
 
-const resources = [
-  { label: "Blog / Articles", href: "#" },
-  { label: "Skin of Colour Resources", href: "#" },
-  { label: "For Pharmacies", href: "#" },
-  { label: "FAQ", href: "#" },
+const socials = [
+  { label: "Instagram", href: site.social.instagram, Icon: InstagramIcon },
+  { label: "LinkedIn", href: site.social.linkedin, Icon: LinkedInIcon },
 ];
 
+function isExternal(href: string) {
+  return /^https?:\/\//.test(href);
+}
+
+/**
+ * A server component — nothing here needs interactivity, so it stays out of the
+ * client bundle. The "Resources" column was removed: every link in it pointed at
+ * `href="#"`, which reads as a real destination and isn't one.
+ */
 export function Footer() {
   return (
-    <footer className="bg-near-black text-cream">
-      <Container className="pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand */}
-          <div>
-            <span className="font-display text-2xl font-semibold text-cream tracking-tight block mb-3">
-              SIMTI
-            </span>
-            <p className="text-sm text-cream/60 italic mb-6">Barrier First, Always</p>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="text-cream/40 hover:text-gold-light transition-colors"
-              >
-                <Instagram size={20} color="currentColor" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-cream/40 hover:text-gold-light transition-colors"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
-            </div>
-          </div>
+    <footer className="relative isolate overflow-hidden bg-near-black text-cream">
+      <div className="grain" aria-hidden="true" />
 
-          {/* Programme */}
+      <Container className="relative pt-20 pb-10">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-gold-light mb-4">
-              Programme
-            </h4>
-            <ul className="space-y-3">
-              {programme.map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    className="text-sm text-cream/60 hover:text-cream transition-colors"
+            {/* Big enough here that the seal's own lettering reads, so the
+                wordmark would be redundant. */}
+            <Logo size={92} wordmark={false} />
+            <p className="mt-4 font-display text-lg italic text-gold-light/80">{site.tagline}</p>
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/50">
+              Clinical skin training for licensed pharmacists in Nigeria, built on the Barrier-First
+              Framework.
+            </p>
+
+            <ul className="mt-7 flex items-center gap-3">
+              {socials.map(({ label, href, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${site.name} on ${label}`}
+                    className="grid place-items-center w-10 h-10 rounded-full border border-cream/12
+                               text-cream/50 transition-colors duration-200
+                               hover:text-gold-light hover:border-gold/40"
                   >
-                    {l.label}
-                  </Link>
+                    <Icon size={18} />
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-gold-light mb-4">
-              Resources
-            </h4>
-            <ul className="space-y-3">
-              {resources.map((l) => (
+          <nav aria-labelledby="footer-programme">
+            <h2
+              id="footer-programme"
+              className="text-2xs font-semibold uppercase tracking-[0.18em] text-gold-light"
+            >
+              Programme
+            </h2>
+            <ul className="mt-5 flex flex-col gap-3.5">
+              {programme.map((l) => (
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    className="text-sm text-cream/60 hover:text-cream transition-colors"
+                    {...(isExternal(l.href) && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                    className="text-sm text-cream/55 transition-colors hover:text-cream"
                   >
                     {l.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Contact */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-gold-light mb-4">
+            <h2 className="text-2xs font-semibold uppercase tracking-[0.18em] text-gold-light">
               Contact
-            </h4>
-            <ul className="space-y-3 text-sm text-cream/60">
+            </h2>
+            <ul className="mt-5 flex flex-col gap-3.5 text-sm text-cream/55">
               <li>
                 <a
-                  href="mailto:hello@safeinmyskintraininginstitute.com"
-                  className="hover:text-cream transition-colors"
+                  href={`mailto:${site.email}`}
+                  className="transition-colors hover:text-cream wrap-break-word"
                 >
-                  hello@safeinmyskintraininginstitute.com
+                  {site.email}
                 </a>
               </li>
               <li>Nigeria</li>
@@ -109,17 +103,10 @@ export function Footer() {
           </div>
         </div>
 
-        <Divider variant="full" className="bg-cream/10" />
+        <hr className="rule-fade mt-14 text-cream" />
 
-        <p className="mt-6 text-xs text-cream/30 text-center">
-          © {new Date().getFullYear()} SIMTI: Safe In My Skin Training Institute. &nbsp;
-          <Link href="#" className="hover:text-cream/60 transition-colors">
-            Privacy Policy
-          </Link>
-          &nbsp;·&nbsp;
-          <Link href="#" className="hover:text-cream/60 transition-colors">
-            Terms
-          </Link>
+        <p className="mt-6 text-center text-xs text-cream/35">
+          © {new Date().getFullYear()} {site.name}: {site.fullName}.
         </p>
       </Container>
     </footer>

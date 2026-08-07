@@ -1,31 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 interface CardFeatureProps {
-  icon?: React.ReactNode;
+  index?: string;
   title: string;
   body: string;
   className?: string;
 }
 
-export function CardFeature({ icon, title, body, className }: CardFeatureProps) {
+/**
+ * The accent rule along the top previously used a `before:` pseudo-element with
+ * a height but no background, so it never rendered. It's now a real gradient
+ * that wipes across on hover.
+ */
+export function CardFeature({ index, title, body, className }: CardFeatureProps) {
   return (
-    <div
+    <motion.article
+      data-motion=""
+      variants={fadeUp}
+      whileHover={{ y: -6 }}
+      transition={{ type: "spring", stiffness: 380, damping: 26 }}
       className={cn(
-        "relative bg-cream border border-border rounded-xl p-8 overflow-hidden",
-        "transition-transform duration-250 hover:-translate-y-1 hover:shadow-lg",
-        "before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-0.75",
+        "group relative flex flex-col h-full overflow-hidden",
+        "bg-cream border border-border rounded-2xl p-8 lg:p-10",
+        "shadow-sm transition-shadow duration-300 hover:shadow-lg",
         className
       )}
     >
-      {icon && (
-        <div className="w-12 h-12 bg-gold-pale rounded-lg flex items-center justify-center mb-5">
-          {icon}
-        </div>
+      <span
+        aria-hidden="true"
+        className={cn(
+          "absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0",
+          "bg-linear-to-r from-gold via-gold-light to-transparent",
+          "transition-transform duration-500 ease-editorial group-hover:scale-x-100"
+        )}
+      />
+
+      {index && (
+        <span className="font-mono tabular text-xs font-medium text-gold tracking-widest mb-6">
+          {index}
+        </span>
       )}
-      <h3 className="font-display text-2xl font-semibold text-brown-dark mb-3 leading-snug">
+
+      <h3 className="font-display text-2xl lg:text-[1.75rem] font-semibold leading-snug text-balance mb-3">
         {title}
       </h3>
-      <p className="text-base text-brown-light leading-relaxed">{body}</p>
-    </div>
+      <p className="text-brown-light leading-relaxed text-pretty">{body}</p>
+    </motion.article>
   );
 }
