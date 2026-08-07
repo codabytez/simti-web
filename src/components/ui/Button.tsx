@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { cn, isExternal } from "@/lib/utils";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
@@ -55,13 +55,12 @@ export function Button({
 
   if (rest.href !== undefined) {
     const { href, ...anchorProps } = rest;
-    const isExternal = /^https?:\/\//.test(href);
 
     return (
       <Link
         href={href}
         className={classes}
-        {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+        {...(isExternal(href) && { target: "_blank", rel: "noopener noreferrer" })}
         {...anchorProps}
       >
         {children}

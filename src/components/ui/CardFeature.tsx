@@ -30,15 +30,6 @@ export function CardFeature({ index, title, body, className }: CardFeatureProps)
         className
       )}
     >
-      <span
-        aria-hidden="true"
-        className={cn(
-          "absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0",
-          "bg-linear-to-r from-gold via-gold-light to-transparent",
-          "transition-transform duration-500 ease-editorial group-hover:scale-x-100"
-        )}
-      />
-
       {index && (
         <span className="font-mono tabular text-xs font-medium text-gold tracking-widest mb-6">
           {index}

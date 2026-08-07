@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Container } from "@/components/layout";
-import { BarrierDiagram, Button, Eyebrow } from "@/components/ui";
+import { Button, Eyebrow } from "@/components/ui";
 import { Reveal, Stagger } from "@/components/motion";
 import { heroTrustSignals } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -114,8 +115,15 @@ export function Hero() {
                          bg-linear-to-br from-brown/50 via-brown-dark to-navy-dark
                          ring-1 ring-inset ring-cream/12 shadow-xl"
             >
+              <Image
+                src="/hero-portrait.webp"
+                alt="A SIMTI facilitator presenting a Barrier-First case comparison during a live training session"
+                fill
+                priority
+                sizes="(min-width: 1024px) 40vw, 0px"
+                className="object-cover"
+              />
               <div className="grain" aria-hidden="true" />
-              <BarrierDiagram className="absolute inset-0 h-full" />
             </div>
 
             <motion.div
