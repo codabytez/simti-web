@@ -116,3 +116,35 @@ export function LinkedInIcon({ size = 24, ...props }: IconProps) {
     </svg>
   );
 }
+
+export function FacebookIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+      {...props}
+    >
+      <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36C0 23.41.59 24 1.32 24h11.5v-9.3H9.7v-3.62h3.12V8.41c0-3.1 1.89-4.79 4.65-4.79 1.32 0 2.46.1 2.79.14v3.24h-1.92c-1.5 0-1.8.72-1.8 1.76v2.31h3.59l-.47 3.62h-3.12V24h6.12c.73 0 1.32-.59 1.32-1.32V1.32C24 .59 23.41 0 22.68 0Z" />
+    </svg>
+  );
+}
+
+export function TikTokIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+      {...props}
+    >
+      <path d="M16.5 0h-3.4v16.3c0 1.65-1.32 3-2.96 3a2.98 2.98 0 0 1-2.97-3 2.98 2.98 0 0 1 2.97-3c.3 0 .6.05.87.13V9.9a6.6 6.6 0 0 0-.87-.06 6.42 6.42 0 0 0-6.4 6.43A6.42 6.42 0 0 0 10.14 22a6.42 6.42 0 0 0 6.4-6.43V8.06a8.36 8.36 0 0 0 4.86 1.56V6.2a4.99 4.99 0 0 1-4.9-6.2Z" />
+    </svg>
+  );
+}

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Container } from "./Container";
-import { InstagramIcon, LinkedInIcon, Logo } from "@/components/ui";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, Logo, TikTokIcon } from "@/components/ui";
 import { site } from "@/lib/site";
+import { isExternal } from "@/lib/utils";
 
 const programme = [
   { label: "About SIMTI", href: "#about" },
@@ -13,11 +14,9 @@ const programme = [
 const socials = [
   { label: "Instagram", href: site.social.instagram, Icon: InstagramIcon },
   { label: "LinkedIn", href: site.social.linkedin, Icon: LinkedInIcon },
+  { label: "Facebook", href: site.social.facebook, Icon: FacebookIcon },
+  { label: "TikTok", href: site.social.tiktok, Icon: TikTokIcon },
 ];
-
-function isExternal(href: string) {
-  return /^https?:\/\//.test(href);
-}
 
 /**
  * A server component — nothing here needs interactivity, so it stays out of the

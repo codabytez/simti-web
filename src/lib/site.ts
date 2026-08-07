@@ -14,7 +14,9 @@ export const site = {
   applyUrl: "https://tix.africa/discover/safe-in-my-skin-training-institute-simti-cohort",
   curriculumPdf: "/simti-cohort-2-curriculum.pdf",
   social: {
-    instagram: "https://instagram.com",
-    linkedin: "https://linkedin.com",
+    instagram: "https://www.instagram.com/simti.institute",
+    linkedin: "https://www.linkedin.com/company/simti/",
+    facebook: "https://facebook.com/simti.institute",
+    tiktok: "https://www.tiktok.com/@simti_institute",
   },
 } as const;

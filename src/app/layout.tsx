@@ -84,7 +84,7 @@ const jsonLd = {
   image: `${site.url}/logo.png`,
   foundingDate: "2025",
   areaServed: { "@type": "Country", name: "Nigeria" },
-  sameAs: [site.social.instagram, site.social.linkedin],
+  sameAs: [site.social.instagram, site.social.linkedin, site.social.facebook, site.social.tiktok],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
