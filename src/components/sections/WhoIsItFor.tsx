@@ -1,61 +1,72 @@
 "use client";
 
-import { Container } from "@/components/layout/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-
-const checklist = [
-  "Licensed pharmacist (PCN registered)",
-  "Customer-facing role (community or hospital pharmacy)",
-  "Regularly asked about skin conditions and products",
-  "Ready to add a clinical specialty to your practice",
-];
+import { Section } from "@/components/layout";
+import { SectionHeading } from "@/components/ui";
+import { Reveal, Stagger } from "@/components/motion";
+import { eligibility } from "@/lib/content";
 
 export function WhoIsItFor() {
   return (
-    <section className="bg-cream py-24 lg:py-32">
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <RevealOnScroll delay={0}>
-              <Eyebrow>Is This for You?</Eyebrow>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.08}>
-              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-brown-dark leading-tight mb-6">
-                Built for Practising Pharmacists Ready to Specialise
-              </h2>
-            </RevealOnScroll>
-            <RevealOnScroll delay={0.16}>
-              <p className="text-brown-light leading-relaxed mb-4">
+    <Section tone="cream" aria-labelledby="fit-heading">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div>
+          <SectionHeading
+            id="fit-heading"
+            eyebrow="Is This for You?"
+            title="Built for Practising Pharmacists Ready to Specialise"
+          />
+
+          <Stagger stagger={0.09} className="mt-6 flex flex-col gap-4 max-w-xl">
+            <Reveal>
+              <p className="text-lead text-brown-light text-pretty">
                 SIMTI is not a general skincare course. It is a clinical cohort programme designed
                 specifically for licensed pharmacists who interact with patients daily.
               </p>
-              <p className="text-brown-light leading-relaxed">
+            </Reveal>
+            <Reveal>
+              <p className="text-lead text-brown-light text-pretty">
                 If you are regularly asked about skin conditions and want to answer those questions
                 with clinical confidence, this programme was built for you.
               </p>
-            </RevealOnScroll>
-          </div>
-
-          <RevealOnScroll delay={0.2}>
-            <div className="bg-cream-dark rounded-2xl p-10">
-              <h3 className="font-display text-2xl font-semibold text-brown-dark mb-6">
-                You&apos;re a good fit if you are:
-              </h3>
-              <ul className="space-y-4">
-                {checklist.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-gold-pale border border-gold flex items-center justify-center text-brown-dark font-bold text-xs">
-                      ✓
-                    </span>
-                    <span className="text-brown-dark leading-snug">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </RevealOnScroll>
+            </Reveal>
+          </Stagger>
         </div>
-      </Container>
-    </section>
+
+        <Reveal standalone variant="scaleIn">
+          <div className="rounded-2xl border border-border bg-cream-dark p-9 lg:p-11 shadow-sm">
+            <h3 className="font-display text-2xl font-semibold text-brown-dark mb-7">
+              You&apos;re a good fit if you are:
+            </h3>
+
+            <Stagger stagger={0.08} as="ul" className="flex flex-col gap-5">
+              {eligibility.map((item) => (
+                <Reveal as="li" key={item} className="flex items-start gap-4">
+                  <span
+                    aria-hidden="true"
+                    className="mt-0.5 grid shrink-0 place-items-center w-5 h-5 rounded-full
+                               bg-gold-pale border border-gold/70"
+                  >
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-brown-dark"
+                    >
+                      <path d="m5 13 4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="leading-snug text-brown-dark text-pretty">{item}</span>
+                </Reveal>
+              ))}
+            </Stagger>
+          </div>
+        </Reveal>
+      </div>
+    </Section>
   );
 }
