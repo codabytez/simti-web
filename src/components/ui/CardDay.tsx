@@ -13,7 +13,7 @@ interface CardDayProps {
 }
 
 /**
- * One of the four live training days. Replaces the generic module card — the
+ * One of the five live training days. Replaces the generic module card — the
  * real curriculum has substantive topic lists per day, and hiding them behind a
  * one-line title was underselling the programme.
  */

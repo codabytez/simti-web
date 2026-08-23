@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "SIMTI trains Nigerian pharmacists in clinical skin practice through the Barrier-First Framework. Cohort 2 runs live on Zoom across four intensive days in October 2026.",
+    "SIMTI trains Nigerian pharmacists in clinical skin practice through the Barrier-First Framework. Cohort 2 runs live on Zoom across five intensive days in October 2026.",
   applicationName: site.name,
   keywords: [
     "clinical skin training",

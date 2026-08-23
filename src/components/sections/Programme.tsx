@@ -29,8 +29,8 @@ export function Programme() {
             id="programme-heading"
             eyebrow="Cohort Programme"
             variant="teal"
-            title="A Structured Path Through Four Phases"
-            lead="SIMTI runs as a cohort-based programme, not a self-paced course. You move through four phases with a group of peers — from live training to research — building a professional community that lasts beyond the cohort."
+            title="A Structured Path Through Three Phases"
+            lead="SIMTI runs as a cohort-based programme, not a self-paced course. You move through three phases with a group of peers — from live training to research — building a professional community that lasts beyond the cohort."
           />
 
           <Reveal standalone delay={0.2} className="mt-10">
@@ -64,7 +64,7 @@ export function Programme() {
         </Stagger>
       </div>
 
-      {/* The four phases, as a connected vertical spine. */}
+      {/* The three phases, as a connected vertical spine. */}
       <Stagger stagger={0.11} as="ol" className="relative mt-24 flex flex-col gap-10">
         <span
           aria-hidden="true"

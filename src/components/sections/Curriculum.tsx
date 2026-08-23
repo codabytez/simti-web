@@ -14,7 +14,7 @@ export function Curriculum() {
         id="curriculum-heading"
         eyebrow="What You'll Learn"
         title="From Skin Biology to Clinical Practice"
-        lead="Phase One runs as four intensive, live training days across two weekends — each one building from foundational science toward confident decision-making at the counter."
+        lead="Phase One runs as five intensive, live training days across three weekends — each one building from foundational science toward confident decision-making at the counter."
       />
 
       <Stagger stagger={0.09} as="ul" className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5">

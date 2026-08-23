@@ -67,6 +67,22 @@ export function PeopleIcon(props: IconProps) {
   );
 }
 
+export function ArrowLeftIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M19 12H5m0 0 6 6m-6-6 6-6" />
+    </Icon>
+  );
+}
+
+export function ArrowRightIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M5 12h14m0 0-6-6m6 6-6 6" />
+    </Icon>
+  );
+}
+
 export function MenuIcon(props: IconProps) {
   return (
     <Icon {...props}>
