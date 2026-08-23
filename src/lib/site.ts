@@ -11,7 +11,7 @@ export const site = {
   tagline: "Barrier-First Science, Always",
   url: "https://safeinmyskintraininginstitute.com",
   email: "hello@safeinmyskintraininginstitute.com",
-  applyUrl: "https://tix.africa/discover/safe-in-my-skin-training-institute-simti-cohort",
+  applyUrl: "https://tix.africa/discover/safe-in-my-skin-training-institute-simti-cohort-2",
   curriculumPdf: "/simti-cohort-2-curriculum.pdf",
   social: {
     instagram: "https://www.instagram.com/simti.institute",

@@ -134,7 +134,7 @@ export function Hero() {
               className="absolute -bottom-7 -left-9 rounded-xl px-7 py-5
                          bg-brown-deep/95 backdrop-blur-sm border border-gold/25 shadow-xl"
             >
-              <p className="font-mono tabular text-3xl font-medium text-gold leading-none">4</p>
+              <p className="font-mono tabular text-3xl font-medium text-gold leading-none">5</p>
               <p className="mt-1.5 text-2xs font-semibold uppercase tracking-[0.18em] text-cream/60">
                 Live Training Days
               </p>
