@@ -201,7 +201,11 @@ export const programmeDetails = [
   { icon: "calendar", label: "Cohort 2 dates", value: "10–25 October 2026" },
   { icon: "clock", label: "Delivery mode", value: "Virtual, live on Zoom" },
   { icon: "people", label: "Your trainer", value: "Pharm. Amara Owunwa" },
-  { icon: "award", label: "Outcome", value: "SIMTI Certified Fellow" },
+  {
+    icon: "award",
+    label: "Outcome",
+    value: "SIMTI Certified Skin Health Practitioner (SIMTI CSHP)",
+  },
 ] as const;
 
 export const heroTrustSignals = ["Cohort-Based Learning", "Live on Zoom"] as const;
